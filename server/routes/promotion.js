@@ -17,7 +17,7 @@ promotionRouter.post('', authenticate,function (req, res) {
       
 });
 
-promotionRouter.get('',authenticate,(req, res) => {
+promotionRouter.get('',(req, res) => {
   Promotion.find({}).then((promotion) =>{
     res.send(promotion);
   }).catch((e)=> {
