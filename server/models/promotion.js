@@ -1,4 +1,5 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const _ = require('lodash');
 
 var Promotion = mongoose.model('Promotion',{
   description:{

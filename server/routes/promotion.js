@@ -17,4 +17,13 @@ promotionRouter.post('', authenticate,function (req, res) {
       
 });
 
+promotionRouter.get('',authenticate,(req, res) => {
+  Promotion.find({}).then((promotion) =>{
+    res.send(promotion);
+  }).catch((e)=> {
+      res.status(400).send(e);
+  });
+
+});
+
 module.exports = {promotionRouter};
